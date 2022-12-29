@@ -1,4 +1,6 @@
 # PyCubedMini CircuitPython Fork
+PyCubed Mini Firmware files are located under `ports/atmel-samd/boards/pycubedmini/`
+
 If you encounter any issues, refer to this adafruit article
 [https://learn.adafruit.com/building-circuitpython/build-circuitpython]()
 ## Setup
