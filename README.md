@@ -1,4 +1,6 @@
 # PyCubedMini CircuitPython Fork
+The pycubedmini branch is a fork of version 7.3.x of circuitpython - the latest stable release.
+
 PyCubed Mini Firmware files are located under `ports/atmel-samd/boards/pycubedmini/`
 
 If you encounter any issues, refer to this adafruit article
