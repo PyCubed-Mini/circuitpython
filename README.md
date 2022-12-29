@@ -9,7 +9,6 @@ If you encounter any issues, refer to this adafruit article
 git clone git@github.com:PyCubed-Mini/circuitpython.git
 cd circuitpython
 make fetch-submodules
-git checkout 7.3.x
 ```
 #### Install Required Python Packages
 ```
