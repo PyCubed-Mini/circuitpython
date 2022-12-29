@@ -82,8 +82,8 @@ safe_mode_t wait_for_safe_mode_reset(void) {
     #endif
     uint64_t start_ticks = supervisor_ticks_ms64();
     uint64_t diff = 0;
-    bool boot_in_safe_mode = false;
-    while (diff < 1000) {
+    //bool boot_in_safe_mode = false;
+    while (diff < 0) {
         #ifdef CIRCUITPY_STATUS_LED
         // Blink on for 100, off for 100
         bool led_on = (diff % 250) < 125;
@@ -95,7 +95,7 @@ safe_mode_t wait_for_safe_mode_reset(void) {
         #endif
         #ifdef CIRCUITPY_BOOT_BUTTON
         if (!common_hal_digitalio_digitalinout_get_value(&boot_button)) {
-            boot_in_safe_mode = true;
+            //boot_in_safe_mode = true;
             break;
         }
         #endif
@@ -105,9 +105,9 @@ safe_mode_t wait_for_safe_mode_reset(void) {
     new_status_color(BLACK);
     status_led_deinit();
     #endif
-    if (boot_in_safe_mode) {
-        return USER_SAFE_MODE;
-    }
+    //if (boot_in_safe_mode) {
+    //    return USER_SAFE_MODE;
+    //}
     // Restore the original state of the saved word if no reset occured during our wait period.
     port_set_saved_word(reset_state);
     return NO_SAFE_MODE;
